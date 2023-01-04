@@ -9,6 +9,7 @@ function recep()
         room,measure = pack.unpack(data) 
         -- depending on the room value, we append the measur in the good 
         -- table.
+        -- the tables t1,t2,t3 can be created in teh autorun file and edited in this file.
         if room == 1 then
             table.insert(t1,measure) 
         end 
@@ -27,4 +28,3 @@ function recep()
     client:subscribe("VMC",mqtt.QOS0,message_received) 
     
     end 
-    

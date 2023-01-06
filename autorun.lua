@@ -54,3 +54,7 @@ t = {}
 t1 = {}
 
 max_rooms = 2
+
+-- only for the interface ESP (comment if not your case) : 
+
+thread.start(recep) -- starting reception func on a thread.

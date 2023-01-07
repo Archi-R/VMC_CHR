@@ -49,11 +49,11 @@ print(net.stat())
 -- Switching off the whole led bar
 neoff()
 
--- Creating the different tables, used for saving the humidity values over time
-t = {}
-t1 = {}
 
-max_rooms = 2
+-- creation des tables, servant respectivment pour les pieces 1,2 et 3.
+humP1 = 0
+humP2 = 0
+maxrooms = 2
 
 -- only for the interface ESP (comment if not your case) : 
 

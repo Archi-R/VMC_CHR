@@ -2,11 +2,9 @@ nb_mesures = 24*60
 
 function get_hum(room)
 	if room == 1 then
-		return t1[nb_mesures]
+		return humP1
 	elseif room == 2 then
-		return t2[nb_mesures]
-	elseif room == 3 then
-		return t3[nb_mesures]
+		return humP2
 	end
 end
 

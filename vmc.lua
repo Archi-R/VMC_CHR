@@ -54,6 +54,7 @@ for i=0,3 do
 neo:setPixel(i,0,20,0)
 neo:update()
 end
+end
 
 if humidity >= 70 and humidity < 100 then 
 -- third case : quite high percentage
@@ -63,6 +64,7 @@ for i=0,5 do
 neo:setPixel(i,43,15,0)
 neo:update()
 end 
+end
 
 if humidity > 100 then -- fourth case : very high percentage
 m:write(180) -- totally open
@@ -71,6 +73,7 @@ for i=0,7 do
 neo:setPixel(i,20,0,0)
 neo:update()
 end 
+end
 
 tmr.delay(10) -- delay before next measure.
 

@@ -11,11 +11,11 @@ function recep()
     -- table.
     -- the tables t1,t2,t3 can be created in the autorun file and edited in this file.
     if room == 1 then
-    table.insert(t,measure) 
+        humP1 = measure 
     end 
             
     if room ==  2 then 
-    table.insert(t1,measure) 
+        humP2 = measure 
     end 
     end 
         

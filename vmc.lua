@@ -42,37 +42,23 @@ client:publish("VMC",data,mqtt.QOS0) -- publishing on topic
 if humidity < 40 then -- first case : very low percentage   
 m:write(90) -- nearly closing
 
-neo:setPixel(0,20,0,0)
-neo:update()
 end 
 
 if humidity >= 40 and humidity < 70 then 
 -- second case : "normal" percentage
 m:write(100) -- quite open
 
-for i=0,3 do
-neo:setPixel(i,0,20,0)
-neo:update()
-end
 end
 
 if humidity >= 70 and humidity < 100 then 
 -- third case : quite high percentage
 m:write(150) -- globally open
 
-for i=0,5 do
-neo:setPixel(i,43,15,0)
-neo:update()
-end 
 end
 
 if humidity > 100 then -- fourth case : very high percentage
 m:write(180) -- totally open
-
-for i=0,7 do
-neo:setPixel(i,20,0,0)
-neo:update()
-end 
+ 
 end
 
 tmr.delay(10) -- delay before next measure.

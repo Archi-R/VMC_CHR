@@ -4,8 +4,7 @@ function switch_room()
 	prec = 0
 	suiv = 0
 	switch = true --variable allant servir poue allumer/éteindre les leds et l'écran
-	-- neo:setPixel(suiv, r, v, b); -- TODO
-	-- neo:update();
+	neoff() -- éteindre les leds
 	sensibility = 4;
 	
 
@@ -15,26 +14,25 @@ function switch_room()
 		end
 		if (switch) then -- seulement si les leds sont allumées
 			if (direc == 1) then
-				if (prec < maxrooms*sensibility) then
+				if (prec < (maxrooms*sensibility-1)) then
 					suiv = prec + 1;
 				end
-			elseif (direc == -1) then
+			elseif (direc == 0) then
 				if (prec > 0) then
 					suiv = prec- 1;
 				end
 			end
-			-- TODO afficher valeur piece
-			-- r,v,b = wheelRGB((suiv*255)//8);
-			-- neo:setPixel(prec, 0, 0, 0);
-			-- neo:setPixel(suiv, r, v, b);
-			humitab = suiv//4;
-			affiche_hum_piece(humitab, get_hum(humitab));
+			
+			humitab = 1+(suiv//sensibility);
+			humidi = get_hum(humitab)
+			affiche_hum_piece(humitab, humidi);
+			neopix(humidi);
+			
 			
 			
 			prec = suiv;
 		else -- sinon on éteint la led et l'écran
-			-- neo:setPixel(suiv, 0, 0, 0);
-			-- neo:update();
+			neoff();
 			cls();
 		end
 	end

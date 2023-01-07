@@ -6,20 +6,6 @@ pin_sw = pio.GPIO23
 pin_dht11 = pio.GPIO4
 pin_servo = pio.GPIO2
 
--- -----------------
--- dofile section
-
-dofile("console.lua")
-dofile("publish.lua")
-dofile("publish_temp.lua")
-dofile("vmc.lua")
-dofile("neon.lua")
-dofile("neoff.lua")
-dofile("recep.lua")
---ronan
-dofile("encoder.lua")
-dofile("sensor_local.lua")
-dofile("screen.lua")
 
 -- -----------------
 
@@ -36,6 +22,20 @@ try(
 	function()
 	end
 )
+
+-- -----------------
+-- dofile section
+
+dofile("console.lua")
+dofile("publish.lua")
+dofile("publish_temp.lua")
+dofile("vmc.lua")
+dofile("neon.lua")
+dofile("neoff.lua")
+dofile("recep.lua")
+--ronan
+dofile("encoder.lua")
+dofile("screen.lua")
 
 m:write(90) -- base status of the motor, 90 degrees correspond to the "closed" position
 

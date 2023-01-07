@@ -1,11 +1,8 @@
-client = mqtt.client("Room 1", "mini.arsaniit.com",1883,false)
-client:connect("","")
-
-function recep(longueur, message)
-hum = tonumber(message)
+function neopix(h)
+hum = tonumber(h)
 neoff()
 
-if hum >= 0 and hum < 40 then
+if hum < 40 then
 neo:setPixel(0,20,0,0)
 neo:update()
 print("humidite : "..hum)
@@ -35,5 +32,3 @@ print("humidite : "..hum)
 end
 end
 end
-
-client:subscribe("VMC",mqtt.QOS0,recep)

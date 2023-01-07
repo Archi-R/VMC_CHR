@@ -50,9 +50,8 @@ print(net.stat())
 -- on eteint la barre de led
 
 -- creation des tables, servant respectivment pour les pieces 1,2 et 3.
-t1 = {}
-t2 = {}
-t3 = {}
-max_rooms = 3
+humP1 = 0
+humP2 = 0
+maxrooms = 2
 
 neoff()

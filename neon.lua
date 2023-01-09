@@ -11,6 +11,7 @@ end
 if hum >= 40 and hum < 70 then
 for i=0,3 do
 neo:setPixel(i,0,20,0)
+tmr.delayms(500)
 neo:update()
 print("humidite : "..hum)
 end
@@ -19,6 +20,7 @@ end
 if hum >= 70 and hum < 100 then
 for i=0,5 do
 neo:setPixel(i,43,15,0)
+tmr.delayms(500)
 neo:update()
 print("humidite : "..hum)
 end
@@ -27,6 +29,7 @@ end
 if hum >= 100 then
 for i=0,7 do
 neo:setPixel(i,20,0,0)
+tmr.delayms(500)
 neo:update()
 print("humidite : "..hum)
 end

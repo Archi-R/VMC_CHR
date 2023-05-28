@@ -17,7 +17,7 @@ function switch_room()
 				if (prec < (maxrooms*sensibility-1)) then
 					suiv = prec + 1;
 				end
-			elseif (direc == 0) then
+			elseif (direc == -1) then
 				if (prec > 0) then
 					suiv = prec- 1;
 				end

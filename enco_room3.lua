@@ -18,7 +18,7 @@ function fakedht11()
 		client:publish("VMC",data_,mqtt.QOS0) -- publishing on topic
 		prec_ = suiv_;
 	end
-	enc = encoder.attach(pin_clk, pin_dt, pin_sw, lec);
+	enc = encoder.attach(pin_clk, pin_dt, pin_sw, lec_);
 	
 
 end
